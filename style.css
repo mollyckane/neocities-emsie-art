@@ -642,6 +642,18 @@ img[src$=".svg"] {
     .update-wrapper{
         width: 95vw !important;
     }
+
+    .scrapbook{
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .scrap-card{
+       text-align: center;
+    }
+
     /* .limit-bubble{
         top:50vh !important;
         display: block;
@@ -970,3 +982,58 @@ input[type="range"] {
     color: #9b7e62;
     cursor: pointer;
 }
+
+/* scrapbook page */
+.scrapbook{
+    font-size: .8rem;
+    margin:6rem auto;
+    gap:1rem;
+    width:90vw;
+    height:100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr) 500px;
+    grid-template-areas:
+        "blinkies blinkies gifs gifs gifs"
+        "badges badges gifs gifs gifs"
+        "badges badges gifs gifs gifs"
+        "badges badges gifs gifs gifs"
+        "links links links links links"
+        "links links links links links"
+        "image-resources image-resources image-resources image-resources image-resources";
+}
+
+.blinkies { grid-area: blinkies; }
+.gifs{ 
+    grid-area: gifs; 
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-resources { grid-area:image-resources;}
+.badges { grid-area: badges; }
+.links { grid-area: links; }
+
+.scrap-card{
+    padding: 0.7rem;
+    border:1px dashed #25221e;
+    width: 100%;
+    overflow: auto;
+}
+
+.scrap-card span{
+    text-align: center;
+    width:100%;
+    display: inline-block;
+    padding-bottom:1rem;
+}
+.scrap-card.links a{
+   padding: 0 0.6rem;
+}
+
+.blinkies img{ max-width:150px;}
+.gifs img{ max-width:170px;height: fit-content;}
+.image-resources img { max-width: 400px;}
