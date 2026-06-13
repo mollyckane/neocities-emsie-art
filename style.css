@@ -98,16 +98,17 @@ a{
     text-decoration: none;
 }
 
-.icon > a:hover{
+.icon:hover{
     .icon-glyph{
         font-size: 2rem;
         color: orange;
+        cursor: pointer;
     }
 }
 
-.art-dump{
+.dotted-bg{
     background-image:
-    radial-gradient(#6f62568c 1px, transparent 1px),
+    radial-gradient(#6f625643 1px, transparent 1px),
     radial-gradient(#8b7b6c88 0.4px, transparent 0.4px); 
     background-position: 0 0, 12px 12px;
     background-size: 24px 24px;
@@ -137,7 +138,7 @@ a{
 }
 
 header.header{
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     left: 0;
     width: 100%;
@@ -201,7 +202,12 @@ img[src$=".svg"] {
 .title-sm-header{
     font-size: 0.7rem;
     margin-left:1rem;
+    margin-right: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
 
 .window {
     position: absolute;
@@ -867,7 +873,7 @@ input[type="range"] {
     columns: 250px;
     /* 4 columns, min 150px each */
     column-gap: 1rem;
-    margin: 5rem 0 1rem 0;
+    margin: 2rem 0 1rem 0;
     padding: 0;
     width: calc(100vw - 4rem);
 }
@@ -987,7 +993,7 @@ input[type="range"] {
 /* scrapbook page */
 .scrapbook{
     font-size: .8rem;
-    margin:6rem auto;
+    margin:3rem auto;
     gap:1rem;
     width:90vw;
     height:100%;
@@ -1038,3 +1044,184 @@ input[type="range"] {
 .blinkies img{ max-width:150px;}
 .gifs img{ max-width:170px;height: fit-content;}
 .image-resources img { max-width: 400px;}
+
+.links a{
+    text-decoration: underline dotted;
+    text-decoration-thickness: 3px;
+    color: rgb(222, 72, 144);
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.196);
+    transition: all ease-in-out 0.2s;
+    background: rgba(255, 192, 203, 0.62);
+}
+
+.scrap-card.links a:hover{
+    font-size: 1.2rem;
+
+}
+
+.desktop.dotted-bg main{
+    display: flex;
+    gap: 1rem;
+    font-size: 0.7rem;
+    background: rgb(244, 241, 238);
+    border: 3px solid rgb(222, 206, 187);
+    border-radius: 2rem;
+    padding: 1.5rem;
+    width: fit-content;
+}
+
+/* about card */
+.about-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.about-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.about-window {
+    margin-top: 10rem;
+    position: relative;
+    width: min(600px, 90vw);
+    height: 600px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.0);
+}
+
+.about-window iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.about-close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    z-index: 10;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer; 
+}
+
+@media (max-width:590px) {
+    .about-inner {
+        flex-direction: column !important;
+        max-width: 95vw !important;
+  
+    }
+    .about-window{
+        margin-top: 5rem;;
+    }
+    .about-window iframe {
+        height: 700px;
+    }
+}
+
+.about-inner {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    padding: 2rem;
+    max-width: 600px;
+    overflow: hidden;
+}
+
+/* art notebooks */
+.notebooks-container{
+    height: 100vh;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.notebook{
+    position: relative;
+    width: 350px;
+    height: 500px;
+}
+
+.notebook h1{
+    padding: 0;
+    margin: 0;
+}
+
+.notebooks-container button{
+    background-color: #8b7b6c;
+    border: 1px solid rgba(49, 38, 27, 0.22);
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    color: white;
+    box-shadow: var(--shadow-md);
+    cursor: pointer;
+    transition: ease-out 100ms;
+}
+
+.notebooks-container button:hover{
+    background-color: #5f5245;
+}
+
+.notebook-paper{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    perspective: 1500px;
+}
+
+.front, 
+.back{
+    background-color: rgb(202, 191, 191);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transition: 0.5s;
+}
+
+.front{ z-index: 1; backface-visibility: hidden; border-left: 1px solid #8a745f;}
+.back{ z-index: 0; }
+
+.front-content, .back-content{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    padding: 1rem;
+    font-size: 0.8rem;
+    color: #5f5245;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-content{
+    transform: rotateY(180deg);
+}
+
+.flipped .front,
+.flipped .back{
+    transform: rotateY(-180deg);
+    transition: transform 0.6s;
+}
+
+/* paper stack order */
+.notebook-paper:nth-child(1){ z-index: 3; }
+.notebook-paper:nth-child(2){ z-index: 2; }
+.notebook-paper:nth-child(3){ z-index: 1; }
