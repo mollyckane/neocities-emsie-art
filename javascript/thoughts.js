@@ -21,7 +21,9 @@ const thoughts = [
     "as long as you try your best",
     "be kind to yourself",
     "do you think animals know what we are thinking?",
-    "do you believe in the moon?"
+    "do you believe in the moon?",
+    "cold air cures all ailments",
+    "maybe your purpose is to simply exist..."
 ];
 
 const particleImgs = ['heart', 'tear', 'star', 'cloud', 'spiral'].map(name => {
