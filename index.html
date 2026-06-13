@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
   <script src="javascript/musicplayer.js" defer></script>
+  
 
 </head>
 <body>
@@ -21,10 +22,17 @@
     </div>
 
     <div class="desktop-icons" aria-hidden="true">
-      <div class="icon"><div class="icon-glyph">✶</div>about</div>
+      <div class="icon"><div class="icon-glyph" id="aboutBtn">✶</div>about</div>
       <div class="icon"><div class="icon-glyph">♫</div>music</div>
       <div class="icon"><div class="icon-glyph">✉</div><a href="https://users4.smartgb.com/g/g.php?a=s&i=g44-83576-34">guestbook</a></div>
       <div class="icon"><a href="/pages/art-dump.html"><div class="icon-glyph">✎</div></a>art</div>
+    </div>
+
+    <div id="aboutOverlay" class="about-overlay">
+      <div class="about-window">
+        <button class="about-close" id="aboutClose">✕</button>
+        <iframe src="/pages/about.html" frameborder="0"></iframe>
+      </div>
     </div>
 
     <section class="window tall" data-window style="left: 28vw; top: 7.5rem; z-index: 4;">
@@ -222,5 +230,6 @@
       });
     })();
   </script>
+  <script src="javascript/extra.js"></script>
 </body>
 </html>
