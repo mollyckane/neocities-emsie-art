@@ -666,6 +666,34 @@ img[src$=".svg"] {
         top:50vh !important;
         display: block;
     } */
+    #lightbox-box {
+        max-width: 100% !important;
+    }
+
+    #lightbox-close{
+        right: 2.5rem !important;
+    }
+
+    #lightbox-counter{
+        left: 3rem !important;
+    }
+
+    #lightbox-prev,
+    #lightbox-next {
+      position: relative;
+      top: 20rem;
+      font-size: 1.5rem;
+      padding: 0.6rem 1.2rem;
+    }
+
+    #lightbox-prev {
+        left: 2.5rem;
+      }
+    
+      #lightbox-next {
+        right: 2.5rem;
+      }
+
 }
 
 /* letterpress page */
@@ -883,7 +911,7 @@ input[type="range"] {
     break-inside: avoid;
     width: 95%;
     height: auto;
-    margin: 0 0 2rem;
+    margin: 0 .3rem 2rem;
     display: block;
 }
 
@@ -900,6 +928,99 @@ input[type="range"] {
     height: auto;
     display: block;
 }
+
+/* lightbox */
+#lightbox-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #lightbox-overlay.open {
+    display: flex;
+  }
+  
+  #lightbox-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(25, 18, 12, 0.82);
+    backdrop-filter: blur(4px);
+  }
+  
+  #lightbox-box {
+    position: relative;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    max-width: 90vw;
+    max-height: 90vh;
+    flex-direction: row;
+  }
+  
+  #lightbox-img {
+    max-width: 80vw;
+    max-height: 80vh;
+    object-fit: contain;
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-md);
+    display: block;
+  }
+  
+  #lightbox-caption {
+    position: absolute;
+    bottom: -3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--color-surface-offset);
+    font-size: var(--text-xs);
+    white-space: nowrap;
+    letter-spacing: 0.08em;
+    text-transform: lowercase;
+  }
+  
+  #lightbox-counter {
+    position: absolute;
+    top: -1.8rem;
+    left: 0;
+    color: var(--color-text-muted);
+    font-size: var(--text-xs);
+    font-family: var(--font-body);
+  }
+  
+  #lightbox-close {
+    position: absolute;
+    top: -1.8rem;
+    right: 0;
+    background: none;
+    border: none;
+    color: var(--color-surface-offset);
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: var(--font-body);
+    padding: 0;
+  }
+  
+  #lightbox-prev,
+  #lightbox-next {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--color-border);
+    color: var(--color-surface-offset);
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    padding: 0.4rem 0.7rem;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background 0.15s ease;
+  }
+  
+  #lightbox-prev:hover,
+  #lightbox-next:hover {
+    background: rgba(255, 255, 255, 0.18);
+  }
 
 /* update log */
 .update-wrapper {
