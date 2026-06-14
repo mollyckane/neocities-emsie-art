@@ -132,10 +132,13 @@ a{
 
 .desktop {
     position: relative;
+    display: grid;
     width: 100vw;
-    height: 100vh;
+    /* height: 100vh; */
+    gap: 1rem;
     padding: var(--space-4);
-    overflow: hidden;
+    grid-template-columns: 100px repeat(4, auto);
+    grid-template-rows: auto repeat(2, auto);
 }
 
 header.header{
@@ -176,13 +179,14 @@ img[src$=".svg"] {
 }
 
 .title-stamp {
-    position: absolute;
+    position: relative;
     left: 50%;
     top: var(--space-6);
     transform: translateX(-50%);
     text-align: center;
     z-index: 1;
     pointer-events: none;
+    margin-bottom:2rem;
 }
 
 .title-stamp h1 {
@@ -211,7 +215,6 @@ img[src$=".svg"] {
 
 
 .window {
-    position: absolute;
     width: min(32rem, calc(100vw - 2rem));
     background: var(--color-surface);
     border: 1px solid var(--color-border);
@@ -219,6 +222,7 @@ img[src$=".svg"] {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: var(--radius-md);
+    height: fit-content;
     overflow: hidden;
 }
 
@@ -379,7 +383,6 @@ img[src$=".svg"] {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0;
     overflow: hidden;
     border-top: 1px solid var(--color-border);
     background: rgba(248, 241, 232, 0.86);
@@ -424,7 +427,6 @@ img[src$=".svg"] {
 }
 
 .desktop-icons {
-    position: absolute;
     left: var(--space-4);
     top: 7rem;
     display: grid;
@@ -574,6 +576,7 @@ img[src$=".svg"] {
     }
 
     .desktop {
+        display: block;
         min-height: 100vh;
         height: auto;
         padding-bottom: 5rem;
@@ -585,15 +588,16 @@ img[src$=".svg"] {
         position: static;
         transform: none;
         pointer-events: auto;
+
     }
 
     .title-stamp {
-        margin: 0 0 var(--space-4);
-        text-align: left;
+        margin: 1rem auto;
+        text-align: center;
     }
 
     .desktop-icons {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(4, minmax(0, 1fr));
         margin-bottom: var(--space-4);
     }
 
@@ -662,15 +666,23 @@ img[src$=".svg"] {
        text-align: center;
     }
 
+    .title-sm-header {
+	    flex-wrap: wrap;
+    }
+
+    div.header-dashed{
+        width: 91% !important;
+    }
+
     /* .limit-bubble{
         top:50vh !important;
         display: block;
     } */
-    #lightbox-box {
-        max-width: 100% !important;
-    }
+    /* #lightbox-overlay.open {
+        display: none !important;
+    } */
 
-    #lightbox-close{
+    /* #lightbox-close{
         right: 2.5rem !important;
     }
 
@@ -681,7 +693,7 @@ img[src$=".svg"] {
     #lightbox-prev,
     #lightbox-next {
       position: relative;
-      top: 20rem;
+      top: 16rem;
       font-size: 1.5rem;
       padding: 0.6rem 1.2rem;
     }
@@ -692,7 +704,7 @@ img[src$=".svg"] {
     
       #lightbox-next {
         right: 2.5rem;
-      }
+      } */
 
 }
 
@@ -1264,6 +1276,13 @@ input[type="range"] {
     }
     .about-window iframe {
         height: 700px;
+    }
+}
+
+@media (max-width: 1600px){
+    .desktop{
+        display: flex;
+        flex-wrap: wrap;
     }
 }
 
