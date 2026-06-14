@@ -63,8 +63,16 @@ document.querySelectorAll('.art-panel').forEach((panel, i) => {
     panel.onclick = () => openLightbox(i);
 });
 
+function isMobile() {
+    return window.matchMedia('(max-width: 900px)').matches;
+}
+
 //logic functions
 function openLightbox(index) {
+    if (isMobile()){
+        return;
+    }
+    
     currentIndex = index;
     updateLightbox();
     overlay.classList.add('open');
