@@ -20,7 +20,7 @@
       <p>in progress . . .</p>
   </div>
   <section class="wip-page">
-    <p>please excuse me while <br>i construct my site
+    <!-- <p>please excuse me while <br>i construct my site
       <br>but while you're here... you can check out my other pages:
       <ul>
         <li class="glow-text"><a href="/pages/art-dump.html">art-dump</a></li>
@@ -32,18 +32,15 @@
         <li><a href="/pages/update-log.html">update-log</a></li>
         <li><a href="/pages/scrapbook.html">scrapbook</a></li>
       </ul>
-    </p>
+    </p> -->
     
   </section>
-
-  
-  <!-- <main class="desktop" id="main">
+  <section class="desktop-new">
     
-
-    <div class="desktop-icons" aria-hidden="true">
+    <!-- sidebar icons -->
+    <div class="desktop-icons" aria-hidden="true" style="grid-area: 1 / 1 / 2 / 2;">
       <div class="icon"><div class="icon-glyph" id="aboutBtn">✶</div>about</div>
-      <div class="icon"><div class="icon-glyph">♫</div>music</div>
-      <div class="icon"><div class="icon-glyph">✉</div><a href="https://users4.smartgb.com/g/g.php?a=s&i=g44-83576-34">guestbook</a></div>
+      <!-- <div class="icon"><div class="icon-glyph">✉</div><a href="https://users4.smartgb.com/g/g.php?a=s&i=g44-83576-34">guestbook</a></div> -->
       <div class="icon"><a href="/pages/art-dump.html"><div class="icon-glyph">✎</div></a>art</div>
     </div>
 
@@ -54,50 +51,92 @@
       </div>
     </div>
 
-    <section class="window tall" data-window style="left: 28vw; top: 7.5rem; z-index: 4;">
-      <header class="window-header" data-drag-handle>
-        <div class="window-title"><span class="window-dot"></span> home</div>
-        <div class="window-controls">
-          <button type="button" aria-label="Minimize">_</button>
-          <button type="button" aria-label="Maximize">□</button>
-          <button type="button" aria-label="Close">×</button>
-        </div>
-      </header>
-      <div class="window-body">
-        <div class="hero-etch">
-          <img src="hero-image.jpg">
-        </div>
-        <p class="lede">the way my heart beats inside me,<br>
-        every day, every hour<br>
-      and im breathing still.</p>
+    <!--  currently playing  -->
+    <div class="currently-playing" style="grid-area: 1 / 2 / 4 / 3;">
+      <div class="currently-playing-info">
+        <p>currently playing: 
+        <p class="currently-playing-game-title">project zomboid</p></p>
       </div>
-    </section>
-
-    <---------- a quiet room section ---------
-    <section class="window medium" data-window style="left: 9rem; top: 11rem; z-index: 6;">
-      <header class="window-header" data-drag-handle>
-        <div class="window-title"><span class="window-dot"></span> about this place</div>
-        <div class="window-controls">
-          <button type="button" aria-label="Minimize">_</button>
-          <button type="button" aria-label="Maximize">□</button>
-          <button type="button" aria-label="Close">×</button>
-        </div>
-      </header>
-      <div class="window-body">
-        <----------- a quiet room ----------
-        <h2 class="section-title">a quiet room</h2>
-        <p class="note">i'm just a girl trying to find a place to fit in, creating and dilly-dallying, trying to view every day as a blessing rather than a curse &lt;3</p>
-        <ul class="link-list">
-          <li><a href="#" target="_blank" rel="noopener noreferrer">a stuffed specimen...</a></li>
-          <li><a href="pages/thoughts.html" target="_blank" rel="thoughts" class="glow-text">a void of particles...</a></li>
-          <li><a href="pages/letterpress.html" target="_blank" rel="letterpress" class="glow-text">a letterpress set...</a></li>
-        </ul>
+      
+      <div class="currently-playing-grid">
+        <img src="/images/Project Zomboid Me as a Character.jpg">
+        <table>
+          <tr>
+            <th>emsie's traits</th>
+          </tr>
+          <tr style="color: rgb(209, 35, 35);">
+            <td>restless sleeper</td>
+            <td>+6</td>
+          </tr>
+          <tr style="color: rgb(209, 35, 35);">
+            <td>weak</td>
+            <td>+6</td>
+          </tr>
+          <tr style="color: rgb(209, 35, 35);">
+            <td>short of breath</td>
+            <td>+5</td>
+          </tr>
+          <tr style="color: rgb(209, 35, 35);">
+            <td>agoraphobic</td>
+            <td>+4</td>
+          </tr>
+          <tr style="color: rgb(209, 35, 35);">
+            <td>slow healer</td>
+            <td>+3</td>
+          </tr>
+          <tr style="color: rgb(209, 35, 35);">
+            <td>clumsy</td>
+            <td>+2</td>
+          </tr>
+          <tr style="color: rgb(209, 35, 35);">
+            <td>short sighted</td>
+            <td>+2</td>
+          </tr>
+          <tr style="color: rgb(209, 35, 35);">
+            <td>weak stomach</td>
+            <td>+2</td>
+          </tr>
+          <tr style="color: rgb(34, 187, 72);">
+            <td>low thirst</td>
+            <td>-2</td>
+          </tr>
+          <tr style="color: rgb(34, 187, 72);">
+            <td>nutritionist</td>
+            <td>-2</td>
+          </tr>
+          <tr style="color: rgb(34, 187, 72);">
+            <td>organised</td>
+            <td>-4</td>
+          </tr>
+          <tr style="color: rgb(34, 187, 72);">
+            <td>resilient</td>
+            <td>-4</td>
+          </tr>
+          <tr style="color: rgb(34, 187, 72);">
+            <td>tinkerer</td>
+            <td>-4</td>
+          </tr>
+          <tr style="color: rgb(34, 187, 72);">
+            <td>gymnast</td>
+            <td>-5</td>
+          </tr>
+          <tr style="color: rgb(34, 187, 72);">
+            <td>fast learner</td>
+            <td>-6</td>
+          </tr>
+          <tr style="color: rgb(34, 187, 72);">
+            <td>keen hearing</td>
+            <td>-6</td>
+          </tr>
+          <tr style="text-align: left; font-weight: bold; font-size: 1rem;">
+            <td style="border-bottom: 1px solid transparent;padding-top: 1rem;">points to spend: 0</td>
+          </tr>
+        </table>
       </div>
-    </section>
+    </div>
 
-    <-------- music player section --------
-    <section class="window small" data-window style="left: 62vw; top: 9rem; z-index: 7;">
-      <header class="window-header" data-drag-handle>
+    <div class="window small" style="grid-area: 1 / 3 / 2 /4;">
+      <header class="window-header">
         <div class="window-title"><span class="window-dot"></span> player</div>
         <div class="window-controls">
           <button type="button" aria-label="Minimize">_</button>
@@ -131,126 +170,47 @@
           <span style="font-size:0.6rem;color:inherit;">track credits: <a href="https://freemusicarchive.org/music/pamela-yuen/contact" target="_blank">pamela yuen</a> <a href="https://freemusicarchive.org/music/john-lopker/contact" target="_blank">john lopker</a> <a href="https://freemusicarchive.org/music/mark-lingard/contact" target="_blank">mark lingard</a></span>
         </div>
       </div>
-    </section>
-
-    <------- links + stamps section --------
-    <section class="window small" data-window style="left: 55vw; top: 27rem; z-index: 3;">
-      <header class="window-header" data-drag-handle>
-        <div class="window-title"><span class="window-dot"></span> links + stamps</div>
-        <div class="window-controls">
-          <button type="button" aria-label="Minimize">_</button>
-          <button type="button" aria-label="Maximize">□</button>
-          <button type="button" aria-label="Close">×</button>
-        </div>
-      </header>
-      <div class="window-body">
-        <div class="stamp-row">
-          <div class="stamp"><a href="/pages/art-dump.html" style="text-decoration: none;">art log</a></div>
-          <div class="stamp">shrines</div>
-          <div class="stamp"><a href="https://users4.smartgb.com/g/g.php?a=s&i=g44-83576-34"></a>guestbook</a></div>
-          <div class="stamp"><a href="pages/scrapbook.html">scrapbook</a></div>
-        </div>
-        <p class="credits">[88x31] buttons, friend links, fav games, tiny obsessions incoming.</p>
-      </div>
-    </section>
-
-    <section></section>
-
-    <------- status section -------
-    <section class="window small" data-window style="left: 20vw; top: 29rem; z-index: 5;">
-      <header class="window-header" data-drag-handle>
-        <div class="window-title"><span class="window-dot"></span> status</div>
-        <div class="window-controls">
-          <button type="button" aria-label="Minimize">_</button>
-          <button type="button" aria-label="Maximize">□</button>
-          <button type="button" aria-label="Close">×</button>
-        </div>
-      </header>
-      <-- status box content --
-      <div class="window-body">
-        <div class="status-box">
-          currently thinking about: stipple textures, stars, the moon and pages that feel like rooms.
-        </div>
-        <ul class="mini-list" style="margin-top: 1rem;">
-          <li><a href="/pages/update-log.html" target="_blank">update log</a></li>
-        
-        
-        </ul>
-      </div>
-    </section>
-  </main>
-
-  ------ buttons banner --------
-  <div class="marquee-wrap" aria-label="Scrolling stamps banner">
-    <div class="marquee">
-      <div class="marquee-item">black tea addict</div>
-      <div class="marquee-item">draggable windows</div>
-      <div class="marquee-item">tiny relics & dusty links</div>
-      <div class="marquee-item">UTC +1</div>
-      <div class="marquee-item">old web forever</div>
-      <div class="marquee-item">guestbook coming soon</div>
-      <div class="marquee-item">black tea addict</div>
-      <div class="marquee-item">draggable windows</div>
-      <div class="marquee-item">tiny relics & dusty links</div>
-      <div class="marquee-item">UTC +1</div>
-      <div class="marquee-item">old web forever</div>
-      <div class="marquee-item">guestbook coming soon</div>
-      <div class="marquee-item"><img src="https://i.postimg.cc/pdd3rCQ5/winkingyawningbunny.gif" style="width:17px;height:23px;border:none;background:none;"></div>
     </div>
-  </div> -->
 
-  <!-- <script>
-    (() => {
-      const windows = Array.from(document.querySelectorAll('[data-window]'));
-      let z = 20;
+    <div class="window small" style="grid-area: 2 / 3 / 3 /4; height: 100%;">
+      <header class="window-header">
+        <div class="window-title"><span class="window-dot"></span><a href="/pages/update-log.html" target="_blank">update log</a></div>
+        <div class="window-controls">
+          <button type="button" aria-label="Minimize">_</button>
+          <button type="button" aria-label="Maximize">□</button>
+          <button type="button" aria-label="Close">×</button>
+        </div>
+      </header>
+      <iframe src="/pages/update-log.html" frameborder="0" height="100%" width="100%"></iframe> 
+    </div>
 
-      function bringToFront(win) {
-        z += 1;
-        win.style.zIndex = z;
-      }
+    <a href="/pages/letterpress.html" style="grid-area: 3 / 3 / 4 / 4;">
+      <div class="letterpress-snippet-container">
+        <img src="/images/letterpress/S@2x.png">
+        <img src="/images/letterpress/P@2x.png">
+        <img src="/images/letterpress/E@2x.png">
+        <img src="/images/letterpress/A@2x.png">
+        <img src="/images/letterpress/K@2x.png">
+      </div>
+    </a>
+    
 
-      windows.forEach((win) => {
-        const handle = win.querySelector('[data-drag-handle]');
-        if (!handle) return;
+    <div class="window art-dump-snippet">
+      <header class="window-header">
+        <div class="window-title"><span class="window-dot"></span><a href="/pages/art-dump.html" target="_blank">art-dump</a></div>
+        <div class="window-controls">
+          <button type="button" aria-label="Minimize">_</button>
+          <button type="button" aria-label="Maximize">□</button>
+          <button type="button" aria-label="Close">×</button>
+        </div>
+      </header>
+      <iframe src="/pages/art-dump.html" frameborder="0" height="100%" width="100%"></iframe> 
+    </div>
+  </section>
 
-        const controls = win.querySelectorAll('.window-controls button');
-        controls.forEach((button) => {
-          button.addEventListener('click', () => bringToFront(win));
-        });
-
-        win.addEventListener('mousedown', () => bringToFront(win));
-
-        handle.addEventListener('pointerdown', (event) => {
-          if (window.innerWidth <= 900) return;
-          if (event.target.closest('.window-controls')) return;
-          bringToFront(win);
-          const rect = win.getBoundingClientRect();
-          const offsetX = event.clientX - rect.left;
-          const offsetY = event.clientY - rect.top;
-          handle.setPointerCapture(event.pointerId);
-
-          const move = (moveEvent) => {
-            const maxX = window.innerWidth - rect.width - 12;
-            const maxY = window.innerHeight - rect.height - 54;
-            const nextX = Math.min(Math.max(12, moveEvent.clientX - offsetX), Math.max(12, maxX));
-            const nextY = Math.min(Math.max(12, moveEvent.clientY - offsetY), Math.max(12, maxY));
-            win.style.left = `${nextX}px`;
-            win.style.top = `${nextY}px`;
-          };
-
-          const up = () => {
-            handle.removeEventListener('pointermove', move);
-            handle.removeEventListener('pointerup', up);
-            handle.removeEventListener('pointercancel', up);
-          };
-
-          handle.addEventListener('pointermove', move);
-          handle.addEventListener('pointerup', up);
-          handle.addEventListener('pointercancel', up);
-        });
-      });
-    })();
-  </script> -->
+  <footer>
+    website created by emsie | MCK 
+  </footer>
   <script src="javascript/extra.js"></script>
 </body>
 </html>
