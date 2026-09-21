@@ -117,5 +117,17 @@
             </span>
         </div>
     </div>
+
+<script>
+    // iframe remove home button
+    document.addEventListener("DOMContentLoaded", function() {
+  if (window.self !== window.top) {
+    const homeButton = document.querySelector('.header-icon');
+    if (homeButton) {
+      homeButton.style.display = 'none'; 
+    }
+  }
+});
+</script>
 </body>
 </html>
