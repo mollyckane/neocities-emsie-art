@@ -46,6 +46,7 @@
     box-sizing: border-box;
 }
 
+
 html,
 body {
     margin: 0;
@@ -567,13 +568,13 @@ img[src$=".svg"] {
 }
 
 .desktop-icons {
-    left: var(--space-4);
-    top: 7rem;
-    z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .status-box {
-    border: 1px dashed rgba(49, 38, 27, 0.26);
+    border: 1px dashed rgba(136, 124, 112, 0.26);
     padding: var(--space-3);
     font-size: var(--text-xs);
     background: rgba(255, 255, 255, 0.44);
@@ -694,8 +695,14 @@ img[src$=".svg"] {
         overflow: auto;
     }
 
+    .window.small{
+        width: 100%;
+    }
+
     .desktop-icons {
         display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
     div.currently-playing {
