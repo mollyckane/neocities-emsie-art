@@ -11,7 +11,8 @@ const volumeSlider = document.getElementById('volume');
 const playlist = [
     { src: 'https://files.catbox.moe/74rgxr.mp3', title: 'new joys', artist: '- pamela yuen.mp3' },
     { src: 'https://files.catbox.moe/4ni0u0.mp3', title: 'lotus quiet', artist: '- lopkerjo.mp3' },
-    { src: 'https://files.catbox.moe/8czsrn.mp3', title: 'electric guitar with eboe', artist: '- mark lingard.mp3' }
+    { src: 'https://files.catbox.moe/8czsrn.mp3', title: 'electric guitar with eboe', artist: '- mark lingard.mp3' },
+    { src: 'https://files.catbox.moe/ivuwzm.mp3', title: 'share your soul', artist: '- ketsa.mp3'}
 ];
 let currentTrack = 0;
 
