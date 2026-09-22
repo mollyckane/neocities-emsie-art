@@ -46,12 +46,18 @@
     box-sizing: border-box;
 }
 
+html{
+    overflow-x: auto;
+    scrollbar-color: rgb(228, 200, 168) rgb(228, 220, 211);
+    scrollbar-width: thin;
+}
 
 html,
 body {
     margin: 0;
     min-height: 100%;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -92,6 +98,11 @@ footer{
         radial-gradient(circle at 80% 10%, rgb(32, 23, 23), transparent 20%),
         linear-gradient(180deg, #463931, #25221e 60%, #2e2a25);
     color: var(--color-surface-offset)
+}
+
+.repeat-bg-1{
+    background-image: url('/images/tp3.gif');
+    background-repeat: repeat;
 }
 
 a{
@@ -156,6 +167,7 @@ a{
     padding: 3rem;
     gap: 1rem;
     row-gap: 1rem;
+    justify-content: center;
 }
 div.currently-playing{
     font-size: 0.8rem;
@@ -243,7 +255,6 @@ div .currently-playing-info{
     height: 100%;
 }
 
-
 .window {
     width: min(32rem, calc(100vw - 2rem));
     height: fit-content;
@@ -323,6 +334,33 @@ div .currently-playing-info{
     min-height: 7rem;
 }
 
+.dragcave{
+    grid-area: 4 / 2 / 5 / 3;
+    width: 570px;
+    background: rgba(255, 255, 255, 0.226);
+    border: 1px solid var(--color-border);
+    background-image: url('/images/star1.gif');
+    background-repeat: repeat;
+}
+div.dragcave p {
+    text-align: center;
+    margin: 1rem 0 !important;
+    font-size: 0.8rem;
+}
+
+.dragons{
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    overflow-x: auto;
+    height: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.dragons img:hover{
+    transform: translateY(-1px);
+}
 
 header.header{
     /* position: absolute; */
@@ -668,7 +706,13 @@ img[src$=".svg"] {
      .window.art-dump-snippet{
        grid-area: 4 / 2 / 4 / 4;
         height: 100%;
+        min-height:320px;
         min-width: 100%;
+    }
+
+    .dragcave{
+        grid-area: 5 / 2 / 5 / 4;
+        width: 100%;
     }
 
 }
@@ -676,6 +720,7 @@ img[src$=".svg"] {
 @media (max-width: 900px) {
     body {
         overflow: auto;
+        overflow-x: hidden;
     }
 
     .desktop {
@@ -703,6 +748,7 @@ img[src$=".svg"] {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: center;
     }
 
     div.currently-playing {
@@ -1187,6 +1233,7 @@ input[type="range"] {
   #lightbox-next:hover {
     background: rgba(255, 255, 255, 0.18);
   }
+
 
 /* update log */
 .update-wrapper {
