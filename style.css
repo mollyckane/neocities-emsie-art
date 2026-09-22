@@ -166,7 +166,7 @@ div.currently-playing{
     border-radius: var(--radius-md);
     height: fit-content;
     max-height: 700px;
-    width: 700px;
+    width: 570px;
     background: rgba(255, 255, 255, 0.226);
     padding: 2rem;
 }
@@ -691,7 +691,7 @@ img[src$=".svg"] {
         flex-direction: column;
         min-height: 100vh;
         height: auto;
-        padding-bottom: 5rem;
+        padding: 1.5rem;
         overflow: auto;
     }
 
@@ -715,8 +715,16 @@ img[src$=".svg"] {
         display: block;
     }
 
+    .letterpress-snippet-container{
+        margin: 2rem 0;
+    }
+
     .window{
         max-width:100%;
+    }
+
+    .window.art-dump-snippet{
+        min-height: 525px;
     }
 
     .title-stamp,
@@ -1402,9 +1410,12 @@ input[type="range"] {
         max-width: 95vw !important;
   
     }
-    .about-window{
-        margin-top: 5rem;;
+    .about-window {
+        margin-top: 1rem;  
+        width: 100%; 
+        height: 700px;
     }
+
     .about-window iframe {
         height: 700px;
     }
