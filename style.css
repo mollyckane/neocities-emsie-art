@@ -151,7 +151,7 @@ a{
 
 .desktop-new{
     display: grid;
-    grid-template-columns: 80px 2fr repeat(3, 1fr); 
+    /* grid-template-columns: 80px 2fr repeat(3, 1fr);  */
     grid-template-rows: auto;
     padding: 3rem;
     gap: 1rem;
